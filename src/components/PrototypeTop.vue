@@ -5,6 +5,19 @@
 <script>
 export default {
 	name: 'PrototypeTop',
+
+	mounted() {
+		test();
+		function test() {
+			console.log('test');
+
+			let t = 3;
+
+			if (t == 1) {
+				console.log('tes123');
+			}
+		}
+	},
 };
 </script>
 
