@@ -1,5 +1,5 @@
 <template>
-	<div class="bottom">bottom</div>
+	<div class="bottom"></div>
 </template>
 
 <script>
@@ -8,8 +8,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.bottom {
-	background: #333;
-}
-</style>
+<style scoped lang="scss"></style>

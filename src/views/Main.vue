@@ -1,11 +1,29 @@
 <template>
-	<div class="main">main...</div>
+	<div>test</div>
 </template>
 
 <script>
 export default {
-	name: 'Home',
+	name: 'Main',
 	components: {},
+
+	data() {
+		return {
+			ISACTIVE: false,
+			MOVIELIST: [{}],
+		};
+	},
+
+	methods: {
+		isTest: function () {
+			alert('test');
+		},
+
+		click() {
+			this.isActive = !this.isActive;
+			this.$refs.test.classList.add('test');
+		},
+	},
 };
 </script>
 <style lang="scss">
