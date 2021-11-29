@@ -1,21 +1,5 @@
 <template>
-	<div class="navi">
-		<h1>{{ TITLE }}</h1>
-		<p>{{ CHECKEDNAME }}</p>
-		<ul>
-			<li v-for="list in THEME" :key="list">
-				<label :for="list.title">{{ list.title }}</label>
-				<input
-					type="radio"
-					name="theme"
-					id="theme"
-					value=""
-					:checked="list.check"
-					v-model="CHECKEDNAME"
-				/>
-			</li>
-		</ul>
-	</div>
+	<div class="navi"></div>
 </template>
 
 <script>
@@ -23,16 +7,18 @@ export default {
 	name: 'PrototypeTop',
 
 	data() {
-		return {
-			TITLE: 'Movie Reservation',
-
-			THEME1: 'DARK',
-			THEME: [
-				{ title: 'DARK', check: 'checekd' },
-				{ title: 'WHITE', check: '' },
-			],
-			CHECKEDNAME: [],
-		};
+		return {};
+	},
+	methods: {
+		bgColorObject: function () {
+			this.isBgcolor = !this.isBgcolor;
+			//테마컬러 버튼 활성 시 #APP에 Class theme 추가
+			if (this.isBgcolor == true) {
+				document.getElementById('app').classList.add('theme_white');
+			} else {
+				document.getElementById('app').classList.remove('theme_white');
+			}
+		},
 	},
 	mounted() {},
 };

@@ -36,6 +36,16 @@
 			<label for="mike">Mike</label>
 			<br />
 			<span>체크한 이름: {{ checkedNames }}</span>
+
+			<input type="radio" id="aaa" value="asdf" v-model="checkedNames" />
+			<label for="mike">Mike</label>
+			<input
+				type="radio"
+				id="aaa2"
+				value="asdf3"
+				v-model="checkedNames"
+			/>
+			<label for="mike">Mike</label>
 		</div>
 
 		<select v-model="selected">

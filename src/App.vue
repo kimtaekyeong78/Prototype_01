@@ -1,19 +1,16 @@
 <template>
 	<PrototypeTop />
 	<router-view />
-	<PrototypeBottom />
 </template>
 
 <script>
 // @ is an alias to /src
 import PrototypeTop from '@/components/PrototypeTop.vue';
-import PrototypeBottom from '@/components/PrototypeBottom.vue';
 
 export default {
 	name: 'Home',
 	components: {
 		PrototypeTop,
-		PrototypeBottom,
 	},
 };
 </script>

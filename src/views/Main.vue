@@ -1,27 +1,37 @@
 <template>
-	<div>test</div>
+	<div></div>
+	<!-- v-on:emitTest="closePopup" -->
+	<Modalpopup ref="ModalPopup" BasicContent="" :LastButton="true" v-on:lastButton="CallBackFunction">
+		<template #contents>
+			<p>Popup contents text is not defined</p>
+		</template>
+		<template #lastButton>Next</template>
+	</Modalpopup>
+
+	<div @click="PopupOpen">중복할인 이벤트</div>
 </template>
 
 <script>
+import Modalpopup from '@/components/Popup.vue';
 export default {
 	name: 'Main',
-	components: {},
+	components: {
+		Modalpopup,
+	},
 
 	data() {
 		return {
-			ISACTIVE: false,
-			MOVIELIST: [{}],
+			//isActive: false,
 		};
 	},
 
 	methods: {
-		isTest: function () {
-			alert('test');
+		CallBackFunction: function () {
+			console.log('별도기능');
 		},
 
-		click() {
-			this.isActive = !this.isActive;
-			this.$refs.test.classList.add('test');
+		PopupOpen: function () {
+			this.$refs.ModalPopup._f_initOpen();
 		},
 	},
 };
