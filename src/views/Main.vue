@@ -1,6 +1,6 @@
 <template>
 	<div></div>
-	<!-- v-on:emitTest="closePopup" -->
+
 	<Modalpopup ref="ModalPopup" BasicContent="" :LastButton="true" v-on:lastButton="CallBackFunction">
 		<template #contents>
 			<p>Popup contents text is not defined</p>
