@@ -1,29 +1,53 @@
 <template>
-	<PrototypeTop />
-	<router-view />
+	<section ref="mainWrap" :class="classObject">
+		<TopNavi />
+		<router-view />
+	</section>
 </template>
 
 <script>
 // @ is an alias to /src
-import PrototypeTop from '@/components/PrototypeTop.vue';
+import TopNavi from '@/components/Topnavi.vue';
 
 export default {
 	name: 'Home',
 	components: {
-		PrototypeTop,
+		TopNavi,
+	},
+	data() {
+		return {
+			isActive: false,
+		};
+	},
+	methods: {},
+	computed: {},
+	mounted() {
+		setTimeout(() => {
+			this.$refs.mainWrap.style.visibility = 'vislble';
+		}, 1000);
 	},
 };
 </script>
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 body {
 	padding: 0;
 	margin: 0;
+	height: 100vh;
 }
+
 #app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'Poiret One', cursive;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
+	height: 100%;
+	background: #141514;
+
+	> section {
+		transition: all 0.3s ease-in;
+		visibility: hidden;
+	}
 }
 </style>

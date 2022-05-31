@@ -1,6 +1,4 @@
 <template>
-	<div></div>
-
 	<Modalpopup ref="ModalPopup" BasicContent="" :LastButton="true" v-on:lastButton="CallBackFunction">
 		<template #contents>
 			<p>Popup contents text is not defined</p>
@@ -8,7 +6,13 @@
 		<template #lastButton>Next</template>
 	</Modalpopup>
 
-	<div @click="PopupOpen">중복할인 이벤트</div>
+	<!-- <div @click="PopupOpen">중복할인 이벤트</div> -->
+
+	<section class="wrap">
+		<article ref="visual" class="content1">
+			<h2>CONST</h2>
+		</article>
+	</section>
 </template>
 
 <script>
@@ -27,17 +31,26 @@ export default {
 
 	methods: {
 		CallBackFunction: function () {
-			console.log('별도기능');
+			//console.log('별도기능');
 		},
 
 		PopupOpen: function () {
 			this.$refs.ModalPopup._f_initOpen();
 		},
 	},
+
+	mounted() {},
 };
 </script>
 <style lang="scss">
-.main {
+.wrap {
 	height: 100vh;
+	.content {
+		&1 {
+			height: 100%;
+			color: #c8c3c0;
+			font-size: 12vw;
+		}
+	}
 }
 </style>

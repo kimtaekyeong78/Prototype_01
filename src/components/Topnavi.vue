@@ -1,10 +1,10 @@
 <template>
-	<div class="navi"></div>
+	<div class="navi">test</div>
 </template>
 
 <script>
 export default {
-	name: 'PrototypeTop',
+	name: 'Topnavi',
 
 	data() {
 		return {};
@@ -27,7 +27,7 @@ export default {
 <style scoped lang="scss">
 .navi {
 	width: 100%;
-	background: #1a1a1a;
+	background: transparent;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

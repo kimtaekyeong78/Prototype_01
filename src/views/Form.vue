@@ -13,38 +13,18 @@
 		<label for="checkbox">{{ checked }}</label>
 
 		<div id="example-3">
-			<input
-				type="checkbox"
-				id="jack"
-				value="Jack"
-				v-model="checkedNames"
-			/>
+			<input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
 			<label for="jack">Jack</label>
-			<input
-				type="checkbox"
-				id="john"
-				value="John"
-				v-model="checkedNames"
-			/>
+			<input type="checkbox" id="john" value="John" v-model="checkedNames" />
 			<label for="john">John</label>
-			<input
-				type="checkbox"
-				id="mike"
-				value="Mike"
-				v-model="checkedNames"
-			/>
+			<input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
 			<label for="mike">Mike</label>
 			<br />
 			<span>체크한 이름: {{ checkedNames }}</span>
 
 			<input type="radio" id="aaa" value="asdf" v-model="checkedNames" />
 			<label for="mike">Mike</label>
-			<input
-				type="radio"
-				id="aaa2"
-				value="asdf3"
-				v-model="checkedNames"
-			/>
+			<input type="radio" id="aaa2" value="asdf3" v-model="checkedNames" />
 			<label for="mike">Mike</label>
 		</div>
 
