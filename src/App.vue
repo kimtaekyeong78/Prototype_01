@@ -23,7 +23,7 @@ export default {
 	computed: {},
 	mounted() {
 		setTimeout(() => {
-			this.$refs.mainWrap.style.visibility = 'vislble';
+			this.$refs.mainWrap.classList.add('active');
 		}, 1000);
 	},
 };
@@ -47,7 +47,11 @@ body {
 
 	> section {
 		transition: all 0.3s ease-in;
-		visibility: hidden;
+		opacity: 0;
+
+		&.active {
+			opacity: 1;
+		}
 	}
 }
 </style>
