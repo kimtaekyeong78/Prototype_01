@@ -24,8 +24,7 @@ export default {
 	mounted() {
 		setTimeout(() => {
 			this.$refs.mainWrap.classList.add('active');
-			
-		}, 1000);
+		}, 800);
 	},
 };
 </script>
