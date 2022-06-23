@@ -33,17 +33,21 @@ export default {
 body {
 	padding: 0;
 	margin: 0;
+	background: #141514;
 	height: 100vh;
-}
-
-#app {
+	font-size: 1.6667vw;
 	font-family: 'Poiret One', cursive;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+#app {
 	text-align: center;
 	color: #2c3e50;
+	max-width: 720px;
+	width: 100%;
 	height: 100%;
-	background: #141514;
+	margin: 0 auto;
 
 	> section {
 		transition: all 0.3s ease-in;

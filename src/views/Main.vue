@@ -11,7 +11,7 @@
 	<section class="wrap">
 		<article ref="visual" class="content1">
 			<h2>CONST</h2>
-			<h3>구축 진행 중입니다<br />빠른 시일내에 찾아 뵙겠습니다<br /></h3>
+			<h3>구축 진행 중입니다<br />빠른 시일내에 찾아 뵙겠습니다</h3>
 		</article>
 	</section>
 </template>
